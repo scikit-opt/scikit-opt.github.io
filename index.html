@@ -1,29 +1,492 @@
+<!DOCTYPE html>
+
+<html>
 <head>
 
-    <!-- 以下方式定时转到其他页面 -->
-    <meta http-equiv="refresh" content="0.1;url=https://scikit-opt.github.io/scikit-opt/#/en/">
-</head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>scikit-opt &mdash; sko</title>
+    <style>
+        .sko-logo {
+            color: #05cee9;
+            font-size: 100px;
+            font-family: "Prosto One";
+            font-style: "italic";
+            font-weight: 500;
+            text-shadow: rgb(0, 255, 165) 1px 1px 0px, rgb(0, 255, 165) 2px 2px 0px, rgb(0, 255, 165) 3px 3px 0px, rgb(0, 255, 165) 4px 4px 0px, rgb(0, 255, 165) 5px 5px 0px, rgb(0, 255, 165) 6px 6px 0px, rgb(0, 255, 165) 7px 7px 0px, rgb(0, 255, 165) 8px 8px 0px, rgb(0, 255, 165) 9px 9px 0px, rgb(0, 255, 165) 10px 10px 0px;
+            line-height: 1.1;
+        }
+    </style>
 
+
+    <link rel="stylesheet" type="text/css" href="./_static/spc-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./_static/spc-extend.css">
+    <link rel="stylesheet" href="./_static/scikit.css" type="text/css">
+    <link rel="stylesheet" href="./_static/pygments.css" type="text/css">
+    <link rel="stylesheet" href="./_static/plot_directive.css" type="text/css">
+    <link rel="stylesheet" href="./_static/sci-org.css" type="text/css">
+
+    <script type="text/javascript" id="documentation_options" data-url_root="./"
+            src="./_static/documentation_options.js"></script>
+    <script type="text/javascript" src="./_static/jquery.js"></script>
+    <script type="text/javascript" src="./_static/underscore.js"></script>
+    <script type="text/javascript" src="./_static/doctools.js"></script>
+    <script type="text/javascript" src="./_static/copybutton.js"></script>
+
+
+    <link rel="author" title="About these documents" href="https://scikit-opt.github.io/about.html">
+    <link rel="search" title="Search" href="https://scikit-opt.github.io/search.html">
+    <link rel="top" title="scikit-opt" href="https://scikit-opt.github.io/#">
+    <link rel="next" title="Scientific computing tools for Python" href="https://scikit-opt.github.io/about.html">
+</head>
 <body>
-<div class="my-logo">Scikit-opt</div>
-<style>
-.my-logo {
-  color: #05cee9;
-  font-size: 100px;
-  font-family: "Prosto One";
-  font-style: "italic";
-  font-weight: 500;
-  text-shadow: rgb(0, 255, 165) 1px 1px 0px, rgb(0, 255, 165) 2px 2px 0px, rgb(0, 255, 165) 3px 3px 0px, rgb(0, 255, 165) 4px 4px 0px, rgb(0, 255, 165) 5px 5px 0px, rgb(0, 255, 165) 6px 6px 0px, rgb(0, 255, 165) 7px 7px 0px, rgb(0, 255, 165) 8px 8px 0px, rgb(0, 255, 165) 9px 9px 0px, rgb(0, 255, 165) 10px 10px 0px;
-  line-height: 1.1;
-}
+
+<style type="text/css">
+    .top-logo-header {
+        text-align: left;
+        background-color: rgb(140, 170, 230);
+        border-bottom: 8px solid rgb(0, 51, 153);
+        margin-top: 10px;
+        padding: 5px;
+        box-shadow: 0px 0px 3px rgb(136, 136, 136);
+    }
 </style>
-<ul>
-    <li><strong>Documentation:</strong> <a href="https://scikit-opt.github.io/scikit-opt/#/en/" target="_blank">https://scikit-opt.github.io/scikit-opt/#/en/</a>
-    </li>
-    <li><strong>文档：</strong> <a href="https://scikit-opt.github.io/scikit-opt/#/zh/" target="_blank">https://scikit-opt.github.io/scikit-opt/#/zh/</a>
-    </li>
-    <li><strong>Source code:</strong> <a href="https://github.com/guofei9987/scikit-opt" target="_blank">https://github.com/guofei9987/scikit-opt</a>
-    </li>
-</ul>
+<div class="container">
+    <div class="top-logo-header">
+        <a href="https://scikit-opt.github.io/#">
+            <div class="sko-logo">Scikit-opt</div>
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="main">
+
+
+        <div class="row-fluid">
+            <div class="span9">
+
+                <div class="row-fluid">
+                    <div class="span9">
+                        <div class="spc-navbar">
+
+                            <ul class="nav nav-pills pull-left">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bodywrapper">
+                    <div class="body" id="spc-section-body">
+
+                        <style type="text/css">
+                            .section h1 {
+                                display: none;
+                            }
+                        </style>
+                        <section id="scipy-org">
+                            <h1>scikit-opt<a class="headerlink" href="https://scikit-opt.github.io/#scipy-org"
+                                             title="Permalink to this headline">¶</a></h1>
+                            <style type="text/css">
+                                table.linktable {
+                                    margin: 10px;
+                                    margin-bottom: 20px;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                }
+
+                                table.icontable {
+                                    margin: 10px;
+                                }
+
+                                table.linktable td {
+                                    padding-left: 15px;
+                                    padding-right: 15px;
+                                    padding-bottom: 5px;
+                                    text-align: center;
+                                }
+                            </style>
+
+
+                            <!-- 第一区域：n个图标 -->
+
+                            <div>
+                                <ul class="thumbnails topnavicons">
+
+                                    <li class="span2">
+                                        <div class="thumbnail">
+                                            <div class="img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=install">
+                                                    <img alt="Install" src="./_static/download.svg" title="Install"
+                                                         height="80">
+                                                    <br>Install
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="span2">
+                                        <div class="thumbnail">
+                                            <div class="img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=quick-start">
+                               <img alt="quick_start" src="./_static/quick_start.svg" title="Install"
+                                                         height="80">
+
+                                                    <br>Quick Start
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="span2">
+                                        <div class="thumbnail">
+                                            <div class="img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/">
+                                                    <img alt="Documentation" src="./_static/documentation.svg"
+                                                         title="Documentation" height="80">
+                                                    <br>Documentation
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li class="span2">
+                                        <div class="thumbnail">
+                                            <div class="img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/zh/">
+                                                    <img alt="文档" src="./_static/documentation.svg" title="文档"
+                                                         height="80">
+                                                    <br>文档
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li class="span2">
+                                        <div class="thumbnail">
+                                            <div class="img">
+                                                <a href="https://github.com/guofei9987/scikit-opt/issues/new">
+                                                    <img alt="Report Bugs" src="./_static/bugs.svg" title="Report Bugs"
+                                                         height="80">
+                                                    <br>Report bugs
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="span2">
+                                        <div class="thumbnail">
+                                            <div class="img">
+                                                <a href="https://www.guofei.site/">
+                                                    <img alt="Blogs" src="./_static/blog.svg" title="Blogs"
+                                                         height="80">
+                                                    <br>Blogs
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <!-- 第二部分：简短的说明 -->
+                            <p>Scikit-opt(or sko) is a Python module of Swarm Intelligence Algorithm.
+                                Such as Genetic Algorithm, Particle Swarm Optimization, Simulated Annealing,
+                                Ant Colony Algorithm, Immune Algorithm, Artificial Fish Swarm Algorithm.
+                            </p>
+
+                            <!-- 第三部分 -->
+                            <div>
+                                <ul class="thumbnails packageicons">
+
+                                    <li class="span4">
+                                        <div class="thumbnail">
+                                            <div class="pull-left img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_2-genetic-algorithm">
+                                                    <img alt="ga" src="./_static/ga.svg" width="64">
+                                                </a>
+                                            </div>
+                                            <div class="img-label">
+                                                <h4 class="media-heading"><a
+                                                        href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_2-genetic-algorithm">GA</a>
+                                                </h4>
+                                                Genetic Algorithm
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="span4">
+                                        <div class="thumbnail">
+                                            <div class="pull-left img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_3-psoparticle-swarm-optimization">
+                                                    <img alt="pso" src="./_static/pso.svg" width="64">
+                                                </a>
+                                            </div>
+                                            <div class="img-label">
+                                                <h4 class="media-heading"><a
+                                                        href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_3-psoparticle-swarm-optimization">PSO</a>
+                                                </h4>
+                                                Particle swarm optimization
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="span4">
+                                        <div class="thumbnail">
+                                            <div class="pull-left img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_4-sasimulated-annealing">
+                                                    <img alt="sa" src="./_static/sa.svg" width="64">
+                                                </a>
+                                            </div>
+                                            <div class="img-label">
+                                                <h4 class="media-heading"><a
+                                                        href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_4-sasimulated-annealing">SA</a>
+                                                </h4>
+                                                Simulated Annealing
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="span4">
+                                        <div class="thumbnail">
+                                            <div class="pull-left img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_5-aca-ant-colony-algorithm-for-tsp">
+                                                    <img alt="aca" src="./_static/aca.svg" width="64">
+                                                </a>
+                                            </div>
+                                            <div class="img-label">
+                                                <h4 class="media-heading"><a
+                                                        href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_5-aca-ant-colony-algorithm-for-tsp">ACA</a>
+                                                </h4>
+                                                ACA(Ant Colony Algorithm) is for tsp
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="span4">
+                                        <div class="thumbnail">
+                                            <div class="pull-left img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_1-differential-evolution">
+                                                    <img alt="de" src="./_static/de.svg" width="64">
+                                                </a>
+                                            </div>
+                                            <div class="img-label">
+                                                <h4 class="media-heading"><a
+                                                        href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_1-differential-evolution">DE</a>
+                                                </h4>
+                                                Differential Evolution
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="span4">
+                                        <div class="thumbnail">
+                                            <div class="pull-left img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_6-immune-algorithm-ia">
+                                                    <img alt="ia" src="./_static/ia.svg"
+                                                         width="64">
+                                                </a>
+                                            </div>
+                                            <div class="img-label">
+                                                <h4 class="media-heading"><a
+                                                        href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_6-immune-algorithm-ia">IA</a>
+                                                </h4>
+                                                Immune Algorithm
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="span4">
+                                        <div class="thumbnail">
+                                            <div class="pull-left img">
+                                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_7-artificial-fish-swarm-algorithm-afsa">
+                                                    <img alt="afsa" src="./_static/afsa.svg"
+                                                         width="64">
+                                                </a>
+                                            </div>
+                                            <div class="img-label">
+                                                <h4 class="media-heading"><a
+                                                        href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_7-artificial-fish-swarm-algorithm-afsa">AFSA</a>
+                                                </h4>
+                                                Artificial Fish Swarm Algorithm
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li class="span12">
+                                        <div class="thumbnail">
+                                            <div class="pull-left img">
+                                                <a href="https://github.com/guofei9987/scikit-opt">
+                                                    <svg viewBox="0 0 16 16" height="32px" width="32px"
+                                                         style="color:red">
+                                                        <path fill-rule="evenodd" fill="#db61a2"
+                                                              d="M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5zM8 14.25l-.345.666-.002-.001-.006-.003-.018-.01a7.643 7.643 0 01-.31-.17 22.075 22.075 0 01-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 01-3.744 2.584l-.018.01-.006.003h-.002L8 14.25zm0 0l.345.666a.752.752 0 01-.69 0L8 14.25z"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="img-label">
+                                                Scikit-opt is totally open-source on <a
+                                                    href="https://github.com/guofei9987/scikit-opt/">GitHub</a> with
+                                                <a href="https://github.com/guofei9987/scikit-opt/blob/master/LICENSE">MIT
+                                                    lisense</a>.
+                                                Any person have the rights to use, copy, modify, merge, publish,
+                                                distribute, sublicense, and/or sell copies of the it.
+                                                <br>
+                                                Donation makes <b>Scikit-opt</b> better.
+                                                <a href="https://opencollective.com/scikit-opt">opencollective</a> or
+                                                <a href="https://www.guofei.site/微信打赏.jpg">微信打赏</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                            <div class="news">
+                                <section id="news">
+                                    <h2>News<a class="headerlink" href="https://scikit-opt.github.io/#news"
+                                               title="Permalink to this headline">¶</a></h2>
+
+                                    <dl class="simple">
+                                        <dt>scikit-opt 0.6.3 released <span class="news-date">2021-05-27</span></dt>
+                                        <dd>
+                                            <p>See <a class="reference internal"
+                                                      href="https://pypi.org/project/scikit-opt/">
+                                                <span class="doc">PyPI</span></a>.</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="simple">
+                                        <dt>scikit-opt 0.6.2 released <span class="news-date">2021-05-13</span></dt>
+                                        <dd>
+                                            <p>See <a class="reference internal"
+                                                      href="https://pypi.org/project/scikit-opt/">
+                                                <span class="doc">PyPI</span></a>.</p>
+                                        </dd>
+                                    </dl>
+
+
+                                    <a href="https://pypi.org/project/scikit-opt/#history" style="margin-left: 200px;">Past
+                                        news...</a>
+                                </section>
+                            </div>
+                            <div class="toctree-wrapper compound">
+                            </div>
+                        </section>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="spc-rightsidebar span3">
+                <div class="sphinxsidebarwrapper">
+
+                    <style type="text/css">
+                        a.extlink:after {
+                            margin-left: 5px;
+                            content: url("_static/external-link.png");
+                        }
+                    </style>
+
+                    <div class="well sidebar-nav">
+                        <ul class="nav nav-list">
+
+                            <li>
+                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=install">Install
+                                    Scikit-opt</a>
+                            </li>
+                            <li>
+                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=quick-start">Quick
+                                    start</a></li>
+                            <li>
+
+                            <li>
+                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/">Documentation</a></li>
+                            <li><a href="https://scikit-opt.github.io/install.html">文档</a></li>
+                            <li><a href="https://scikit-opt.github.io/scikit-opt/#/zh/">Bug reports</a></li>
+                            <li>
+                                <a href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=projects-using-scikit-opt">Projects
+                                    using scikit-opt</a></li>
+                            <li><a class="extlink" href="https://www.guofei.site/">Blogs</a></li>
+
+
+                        </ul>
+                    </div>
+
+                    <div class="well sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Cores:</li>
+                            <li><a class="extlink"
+                                   href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_2-genetic-algorithm">GA(Genetic
+                                Algorithm)</a>
+                            </li>
+                            <li><a class="extlink"
+                                   href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_3-psoparticle-swarm-optimization">PSO(Particle
+                                swarm optimization )
+                            </a>
+                            </li>
+                            <li><a class="extlink"
+                                   href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_4-sasimulated-annealing">SA(Simulated
+                                Annealing)</a>
+                            </li>
+                            <li><a class="extlink"
+                                   href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_5-aca-ant-colony-algorithm-for-tsp">ACA(Ant
+                                Colony Algorithm)</a>
+                            </li>
+                            <li><a class="extlink"
+                                   href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_1-differential-evolution">DE(Differential
+                                Evolution)</a>
+                            </li>
+                            <li><a class="extlink"
+                                   href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_6-immune-algorithm-ia">IA(Immune
+                                Algorithm)</a>
+                            </li>
+                            <li><a class="extlink"
+                                   href="https://scikit-opt.github.io/scikit-opt/#/en/README?id=_7-artificial-fish-swarm-algorithm-afsa">AFSA(Artificial
+                                Fish Swarm Algorithm)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <h3>Search</h3>
+                    <form class="form-search" action="http://www.google.com/search" method="get">
+                        <fieldset>
+                            <!-- we'll use google at least until we get everything in sphinx -->
+                            <input type="text" name="q" size="18" class="input-small search-query">
+                            <button type="submit" class="btn">Go</button>
+                            <input type="hidden" name="as_sitesearch" value="scikit-opt.github.io">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container container-navbar-bottom">
+    <div class="spc-navbar">
+
+    </div>
+</div>
+<div class="container">
+    <div class="footer">
+        <div class="row-fluid">
+            <ul class="inline pull-left">
+                <li>
+                    © Copyright 2021
+                </li>
+                <li>
+                    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 </body>
+</html>
