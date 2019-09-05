@@ -1,6 +1,8 @@
 
 
-## 4. ASA for tsp (Ant Colony Algorithm)
+## ASA for tsp (Ant Colony Algorithm)
+ASA for tsp (Ant Colony Algorithm)  
+
 ASA needs lots of parameter management, which is why I am not going to code it as a class.  
 
 ```bash

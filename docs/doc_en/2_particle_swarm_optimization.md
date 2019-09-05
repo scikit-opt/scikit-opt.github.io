@@ -1,5 +1,5 @@
-## 2. PSO(Particle Swarm Optimization)
-
+##
+PSO(Particle Swarm Optimization)
 
 ```py
 def demo_func(x):

@@ -1,5 +1,6 @@
 
-## 3. SA(Simulated Annealing)
+## Simulated Annealing
+SA(Simulated Annealing)
 ```python
 from SA import SA
 def demo_func(x):
@@ -21,7 +22,7 @@ plt.show()
 ```
 ![sa](https://github.com/guofei9987/pictures_for_blog/blob/master/heuristic_algorithm/sa.png?raw=true)
 
-### 3.1 SA for TSP
+## SA for TSP
 Firstly, your data (the distance matrix). Here I generate the data randomly as a demo (find it in GA for TSP above)
 
 DO SA for TSP
