@@ -10,4 +10,4 @@
 * Ant Colony Algorithm
 
 [GitHub](https://github.com/guofei9987/scikit-opt/)
-[Get Started](/_main)
+[Get Started](docs/doc_en/0_get_started.md)

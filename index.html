@@ -45,7 +45,7 @@
 
     // 封面
     coverpage: true,
-    homepage: '_main.md',
+    homepage: 'docs/doc_en/0_get_started.md',
 
     // 切换页面后，自动滚动到顶部
     auto2top: true,
@@ -68,7 +68,6 @@
     },
 
 
-      // edit on github, 原理没看懂，官网上粘过来的
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
@@ -78,7 +77,7 @@
                 .replace('raw.githubusercontent.com', 'github.com')
                 .replace(/\/master/, '/blob/master')
             } else {
-              url = 'https://github.com/guofei9987/Matlab_notes/blob/master/' + vm.route.file
+              url = 'https://github.com/scikit-opt/scikit-opt.github.io/blob/master/' + vm.route.file
             }
             var editHtml = '[:memo: Edit](' + url + ')\n'
             return editHtml
