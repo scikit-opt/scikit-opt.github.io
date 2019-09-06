@@ -2,7 +2,7 @@
 
 # scikit-opt
 
-> powerful Python module
+> Powerful Python module for Heuristic Algorithms
 
 * Genetic Algorithm
 * Particle Swarm Optimization

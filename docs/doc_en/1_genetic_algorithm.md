@@ -1,7 +1,7 @@
 ## Genetic Algorithm
 
 ```py
-from ga import GA
+from sko.GA import GA
 
 
 def demo_func(x):
@@ -71,3 +71,6 @@ plt.show()
 ```
 
 ![GA_TPS](https://github.com/guofei9987/pictures_for_blog/blob/master/heuristic_algorithm/ga_tsp.png?raw=true)
+
+
+## UDF

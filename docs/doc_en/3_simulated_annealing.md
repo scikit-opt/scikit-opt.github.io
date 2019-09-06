@@ -2,7 +2,7 @@
 ## Simulated Annealing
 SA(Simulated Annealing)
 ```python
-from SA import SA
+from sko.SA import SA
 def demo_func(x):
     x1, x2, x3 = x
     return x1 ** 2 + (x2 - 0.05) ** 2 + x3 ** 2
@@ -27,7 +27,7 @@ Firstly, your data (the distance matrix). Here I generate the data randomly as a
 
 DO SA for TSP
 ```python
-from SA import SA_TSP
+from sko.SA import SA_TSP
 sa_tsp = SA_TSP(func=demo_func, x0=range(num_points))
 best_points, best_distance = sa_tsp.fit()
 ```
