@@ -46,8 +46,8 @@ def selection_elite(self, FitV):
 
 把你的 UDF 自定义算子注册到遗传算法上：
 ```python
-from sko.GA import register_udf
-GA_1 = register_udf({'selection': selection_elite})
+from sko.GA import ga_register_udf
+GA_1 = ga_register_udf({'selection': selection_elite})
 ```
 
 像往常一样运行遗传算法：
@@ -221,9 +221,13 @@ plt.show()
 
 ## 4. 蚁群算法解决TSP问题
 蚁群算法(ACA, Ant Colony Algorithm)  
-蚁群算法在超参数调试上需要大量工作，所以没有深度封装
+
 ```bash
-python ACA.py
+aca = ACA_TSP(func=cal_total_distance, n_dim=8,
+              size_pop=10, max_iter=20,
+              distance_matrix=distance_matrix)
+
+best_x, best_y = aca.fit()
 ```
 ![sa](https://github.com/guofei9987/pictures_for_blog/blob/master/heuristic_algorithm/aca_tsp.png?raw=true)
 
