@@ -231,9 +231,3 @@ aca = ACA_TSP(func=cal_total_distance, n_dim=8,
 best_x, best_y = aca.fit()
 ```
 ![sa](https://github.com/guofei9987/pictures_for_blog/blob/master/heuristic_algorithm/aca_tsp.png?raw=true)
-
-
-## 打赏
-
-
-[打赏](https://guofei9987.github.io/donate/)
