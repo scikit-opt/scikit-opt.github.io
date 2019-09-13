@@ -24,13 +24,12 @@ best_x, best_y = ga.fit()
 例如，如果你想到一种 `选择算子`(`selection`)，你的算子是这样的：（简单地说，就是保证最优的精英一定生存而不是经典遗传算法的大概率生存）  
 改进的
 ```python
-def selection_elite(self, FitV):
+def selection_elite(self):
     '''
     保证最优的精英一定生存，
     而不是经典遗传算法的精英大概率生存
     '''
-    print('udf selection actived')
-
+    FitV = self.FitV
     FitV = (FitV - FitV.min()) / (FitV.max() - FitV.min() + 1e-10) + 0.2
     # the worst one should still has a chance to be selected
     # the elite(defined as the best one for a generation) must survive the selection
@@ -46,8 +45,9 @@ def selection_elite(self, FitV):
 
 把你的 UDF 自定义算子注册到遗传算法上：
 ```python
-from sko.GA import ga_register_udf
-GA_1 = ga_register_udf({'selection': selection_elite})
+from sko.GA import GA, GA_TSP, ga_with_udf
+options = {'selection': {'udf': selection_elite}}
+GA_1 = ga_with_udf(GA, options)
 ```
 
 像往常一样运行遗传算法：
@@ -55,11 +55,10 @@ GA_1 = ga_register_udf({'selection': selection_elite})
 demo_func = lambda x: x[0] ** 2 + (x[1] - 0.05) ** 2 + x[2] ** 2
 ga = GA_1(func=demo_func, n_dim=3, max_iter=500, lb=[-1, -10, -5], ub=[2, 10, 2])
 best_x, best_y = ga.fit()
-#
 print('best_x:', best_x, '\n', 'best_y:', best_y)
 ```
 恭喜你，成功了。  
-（额外发现，精英策略选择算子似乎的确比传统的选择算子效果要好）
+（额外发现，对于这个函数，精英策略选择算子似乎的确比轮盘赌效果要好一些）
 
 > 现在 **udf** 支持遗传算法的这几个算子：   `crossover`, `mutation`, `selection`, `ranking`
 

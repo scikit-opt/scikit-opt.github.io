@@ -23,14 +23,13 @@ best_x, best_y = ga.fit()
 For example, if you just worked out a new type of `selection` function.  
 Your `selection` function is like this:
 ```python
-def selection_elite(self, FitV):
+def selection_elite(self):
     '''
     A new selection strategy.
     This strategy makes the elite (defined as the best one for a generation)
     100% survive the selection
     '''
-    print('udf selection actived')
-
+    FitV = self.FitV
     FitV = (FitV - FitV.min()) / (FitV.max() - FitV.min() + 1e-10) + 0.2
     # the worst one should still has a chance to be selected
     # the elite(defined as the best one for a generation) must survive the selection
@@ -46,8 +45,9 @@ def selection_elite(self, FitV):
 
 Regist your udf to GA
 ```python
-from sko.GA import ga_register_udf
-GA_1 = ga_register_udf({'selection': selection_elite})
+from sko.GA import GA, GA_TSP, ga_with_udf
+options = {'selection': {'udf': selection_elite}}
+GA_1 = ga_with_udf(GA, options)
 ```
 
 Now do GA as usual
